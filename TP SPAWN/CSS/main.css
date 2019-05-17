@@ -1,0 +1,66 @@
+header{
+	width: 100%;
+	height: 50px;
+}
+ 
+.top-nav {
+	left: -1px;
+	width: 100%;
+	position: fixed;
+	display: inline-flex;
+	z-index: 50;
+	top: -10px;
+	font-size: 10%;
+	background-color: white;
+	opacity: 0.9;
+	border-bottom-right-radius: 100%;
+	border-bottom-left-radius: 100%;
+	transition: all 650ms cubic-bezier{1,0,0,1};
+}
+
+.nav-list {
+	list-style: none;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: inline-flex;
+	text-decoration: none;
+}
+
+
+a{
+	color:#00FCDB;
+}
+
+
+li{
+	margin: 0 1rem;
+	display: inline-flex;
+}
+
+
+.nav-link{
+	font-family: 'Satisfy', cursive;
+	font-size: 1rem;
+	padding: 1rem;
+	display: inline-flex;
+}
+
+
+body{
+	background-image: url(images/fortnite.png);
+	background-size: cover;
+	width: 100%;
+}
+
+
+table, table tr, table td, table th{
+	border: 1px solid black;
+}
+
+
+table td, table th{
+	padding: 5px 40px;
+}
