@@ -7,7 +7,7 @@ if (!empty($_POST['new_spawn_x']) && !empty($_post['new_spawn_y']))) {
 
 	if (is_int($xposition) && is_int($yposition)) {
 		
-		$query = $bdd- > prepare("INSERT INTO spawn (XPOSITION, YPOSITION) VALUES (: xposition, : yposition)");
+		$query = $bdd->prepare("INSERT INTO spawn (XPOSITION, YPOSITION) VALUES (: xposition, : yposition)");
 		$query- > execute(array(
 			'xposition' => $xposition,
 			'yposition' => $yposition
