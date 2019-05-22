@@ -129,7 +129,7 @@
 		<center>
 			 <?php
                  $query = "SELECT ID, XPOSITION, YPOSITION FROM spawn";
-                    if ($fetch = $bdd- > query($query)) {
+                    if ($fetch = $bdd->query($query)) {
                         echo '<table>
                         <tr>
                             <th>ID</th>
@@ -137,7 +137,7 @@
                             <th>Y</th>
                         </tr>';
                         
-                        while ($row = $fetch- > fetch()) {
+                        while ($row = $fetch->fetch()) {
                             
                             echo '<tr><td>'.$row['ID'].'</td>';
                             echo '<td>'.$row['XPOSITION'].'</td>';
