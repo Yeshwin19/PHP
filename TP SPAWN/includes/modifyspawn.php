@@ -9,19 +9,19 @@
     	if (is_int($xposition) && is_int($yposition) && is_int($id)) {
 
 
-    		$test = $bdd- > prepare("SELECT * FROM spawn WHERE ID = :id");
-        	$test-  >execute(array(
+    		$test = $bdd->prepare("SELECT * FROM spawn WHERE ID = :id");
+        	$test->execute(array(
             	"id" => $id
             ));
 
-            $test_result = ($test- >rowCount() > 0) ? true : false;
+            $test_result = ($test->rowCount() > 0) ? true : false;
 
             if ($test_result) {
 
             	echo '<center><h1>The Spawn with ID:'.$id.' has been modified with the following value of X:'.$xposition.' and Y:'.$yposition.'</h1></center>';
 
-            	$query = $bdd- > prepare("UPDATE spawn SET XPOSITION=:xposition, YPOSITION=:yposition WHERE id=:id");
-            	 $query- > execute (array(
+            	$query = $bdd->prepare("UPDATE spawn SET XPOSITION=:xposition, YPOSITION=:yposition WHERE id=:id");
+            	 $query->execute (array(
             	 	"xposition" => $xposition,
                 	"yposition" => $yposition,
                 	"id" => $id
