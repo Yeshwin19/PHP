@@ -2,14 +2,14 @@
 session_start();
 include_once ('base.php');
 
-$query = $bdd- > prepare("SELECT id FROM spawn");
-$query- > execute
+$query = $bdd->prepare("SELECT id FROM spawn");
+$query->execute
 
-if($query- > rowCount() > 0) {
+if($query->rowCount() > 0) {
 
 	$items = array();
 	$i = 0;
-	while($rows = $query- > fetch()) {
+	while($rows = $query->fetch()) {
 		$items[$i] = $rows['id'];
 		$i++;
 	}
@@ -28,8 +28,8 @@ if($query- > rowCount() > 0) {
     $_SESSION['last_pick'] = $pick_spawn;
 }
 
- 	$query = $bdd- > prepare("SELECT XPOSITION, YPOSITION FROM spawn WHERE ID=:id");
-    $query- > execute (array(
+ 	$query = $bdd->prepare("SELECT XPOSITION, YPOSITION FROM spawn WHERE ID=:id");
+    $query->execute(array(
     	"id" => $items[$pick_spawn]
     ));
 
