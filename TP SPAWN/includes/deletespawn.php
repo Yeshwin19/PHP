@@ -6,19 +6,19 @@
 
 		if (is_int($id)) {
 			
-			$test = $bdd- > prepare("SELECT * FROM spawn WHERE ID = :id");
-			$test- > execute(array(
+			$test = $bdd->prepare("SELECT * FROM spawn WHERE ID = :id");
+			$test->execute(array(
 				"id" => $id
 			));
 
-			$test_result = ($test- > rowCount() > 0)? true : false;
+			$test_result = ($test->rowCount() > 0)? true : false;
 
 			if ($test_result) {
 
 				echo '<center><h1>The Spawn with ID:'.$id.' has been erased sucessfully!</h1></center>';
 
-				$query = $bdd- > prepare("DELETE FROM spawn WHERE ID = :id");
-				 $query- > execute(array(
+				$query = $bdd->prepare("DELETE FROM spawn WHERE ID = :id");
+				 $query->execute(array(
 				 	"id" => $id
 				));
 
